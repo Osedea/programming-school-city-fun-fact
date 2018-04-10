@@ -1,0 +1,48 @@
+{
+	"invocation": "city fun fact",
+	"intents": [
+		{
+			"name": "IntroductionIntent",
+			"phrases": [
+				"tell me a fun fact",
+				"fun fact"
+			]
+		},
+		{
+			"name": "FunFactIntent",
+			"phrases": [
+				"{city}",
+				"fun fact for {city}"
+			],
+			"inputs": [
+				{
+					"name": "city",
+					"type": {
+						"alexa": "AMAZON.US_CITY",
+						"dialogflow": "@sys.given-name"
+					}
+				}
+			]
+		}
+	],
+	"alexa": {
+		"interactionModel": {
+			"languageModel": {
+				"intents": [
+					{
+						"name": "AMAZON.CancelIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.HelpIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.StopIntent",
+						"samples": []
+					}
+				]
+			}
+		}
+	}
+}
